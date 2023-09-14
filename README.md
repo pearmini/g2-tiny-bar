@@ -6,15 +6,15 @@ The tiny bar mark for [@antv/g2 5.0](https://github.com/antvis/g2).
 
 ## Installing
 
-For package manger, such as NPM:
+For package mangers, such as NPM or Yarn:
 
 ```bash
-$ npm install @strawberry-vis/tiny-bar
+$ npm install @strawberry-vis/g2-tiny-bar
 ```
 
 ```js
 import { Chart } from "@antv/g2";
-import { TinyBar } from "@strawberry-vis/tiny-bar";
+import { TinyBar } from "@strawberry-vis/g2-tiny-bar";
 
 const chart = new Chart({
   container: "container",
