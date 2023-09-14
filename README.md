@@ -2,6 +2,8 @@
 
 The tiny bar mark for [@antv/g2](https://github.com/antvis/g2).
 
+<img src="./img/basic.jpg" width=500 alt="basic">
+
 ## Installing
 
 For package manger, such as NPM:
@@ -54,27 +56,14 @@ See [interval mark](https://g2.antv.antgroup.com/spec/mark/interval).
 
 ## Examples
 
-- [Basic Usage](#basic-usage)
 - [Custom Options](#custom-options)
 - [Add Annotation](#add-annotation)
 - [With API](#with-api)
 - [Global Usage](#global-usage)
 
-### Basic Usage
-
-```js
-chart.options({
-  type: TinyBar,
-  width: 480,
-  height: 80,
-  data: [
-    264, 417, 438, 887, 309, 397, 550, 575, 563, 430, 525, 592, 492, 467, 513,
-    546, 983, 340, 539, 243, 226, 192,
-  ],
-});
-```
-
 ### Custom Options
+
+<img src="./img/basic-style.gif" width=500 alt="basic-style">
 
 ```js
 chart.options({
@@ -96,6 +85,8 @@ chart.options({
 ```
 
 ### Add Annotation
+
+<img src="./img/basic-link.jpg" width=500 alt="basic-link">
 
 ```js
 chart.options({
