@@ -1,6 +1,6 @@
 # @strawberry-vis/g2-tiny-bar
 
-The tiny bar mark for [@antv/g2](https://github.com/antvis/g2).
+The tiny bar mark for [@antv/g2 5.0](https://github.com/antvis/g2).
 
 <img src="./img/basic.jpg" width=500 alt="basic">
 
