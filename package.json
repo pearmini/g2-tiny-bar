@@ -1,0 +1,40 @@
+{
+  "name": "@strawberry-vis/g2-tiny-bar",
+  "version": "0.0.1",
+  "description": "The tiny bar mark for @antv/g2.",
+  "author": {
+    "name": "pearmini",
+    "url": "https://github.com/pearmini"
+  },
+  "license": "ISC",
+  "type": "module",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "exports": {
+    "default": "./src/index.js"
+  },
+  "sideEffects": false,
+  "files": [
+    "src/**/*.js",
+    "dist/**/*.js"
+  ],
+  "scripts": {
+    "dev": "vite dev",
+    "test": "vitest && eslint src test",
+    "build": "rm -rf dist && rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@antv/g2": "^5.1.2",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-terser": "^0.4.3",
+    "eslint": "^8.48.0",
+    "playwright": "^1.37.1",
+    "rollup": "^3.29.1",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

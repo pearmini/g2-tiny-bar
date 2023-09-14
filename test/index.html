@@ -1,0 +1,51 @@
+<script type="module">
+  import * as plots from "./plots/index.js";
+
+  // UI
+  const select = createSelect(() => {
+    const { value } = select;
+    history.pushState({ value }, "", `?name=${value}`);
+    render();
+  });
+  const options = Object.keys(plots).map(createOption);
+  document.body.append(select);
+  select.append(...options);
+
+  // Init app name.
+  const initialValue = new URL(location).searchParams.get("name");
+  if (plots[initialValue]) select.value = initialValue;
+
+  let preClear = null;
+  let preNode = null;
+  render();
+
+  function createSelect(onchange) {
+    const select = document.createElement("select");
+    select.style.margin = "1em";
+    select.onchange = onchange;
+    select.style.display = "block";
+    return select;
+  }
+
+  function createOption(key) {
+    const option = document.createElement("option");
+    option.value = key;
+    option.textContent = key;
+    return option;
+  }
+
+  async function render() {
+    if (typeof preClear === "function") preClear();
+    if (isNode(preNode)) preNode.remove();
+    const fn = plots[select.value];
+    preNode = await fn();
+    if (isNode(preNode)) {
+      document.body.appendChild(preNode);
+      preClear = preNode.clear;
+    }
+  }
+
+  function isNode(node) {
+    return node instanceof HTMLElement || node instanceof SVGElement;
+  }
+</script>
