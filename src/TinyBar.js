@@ -1,7 +1,8 @@
-import { merge } from "lodash";
+import deepmerge from "deepmerge";
 
 export function TinyBar(options) {
   const { data, ...specified } = options;
+
   const defaults = {
     interaction: {
       tooltip: {
@@ -9,6 +10,7 @@ export function TinyBar(options) {
       },
     },
   };
+
   const overrides = {
     type: "interval",
     data,
@@ -18,5 +20,6 @@ export function TinyBar(options) {
     },
     axis: false,
   };
-  return merge({}, defaults, specified, overrides);
+
+  return deepmerge.all([{}, defaults, specified, overrides]);
 }

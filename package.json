@@ -11,6 +11,7 @@
   "main": "src/index.js",
   "module": "src/index.js",
   "exports": {
+    "umd": "./dist/g2-tiny-bar.min.js",
     "default": "./src/index.js"
   },
   "sideEffects": false,
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@antv/g2": "^5.1.2",
+    "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-terser": "^0.4.3",
     "eslint": "^8.48.0",
@@ -35,6 +37,6 @@
     "vitest": "^0.34.2"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "deepmerge": "^4.3.1"
   }
 }
