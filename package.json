@@ -1,6 +1,6 @@
 {
   "name": "@strawberry-vis/g2-tiny-bar",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "The tiny bar mark for @antv/g2.",
   "author": {
     "name": "pearmini",
