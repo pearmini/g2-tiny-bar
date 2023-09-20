@@ -7,6 +7,13 @@ export function TinyBar(options) {
     interaction: {
       tooltip: {
         render: (_, { items }) => items[0].value,
+        css: {
+          ".g2-tooltip": {
+            "min-width": "0px",
+            "text-align": "center",
+            padding: "5px 10px",
+          },
+        },
       },
     },
   };
