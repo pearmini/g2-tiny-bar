@@ -1,4 +1,4 @@
-# @strawberry-vis/g2-tiny-bar
+# @berryv/g2-tiny-bar
 
 The tiny bar mark for [@antv/g2 5.0](https://github.com/antvis/g2).
 
@@ -9,12 +9,12 @@ The tiny bar mark for [@antv/g2 5.0](https://github.com/antvis/g2).
 For package mangers, such as NPM or Yarn:
 
 ```bash
-$ npm install @strawberry-vis/g2-tiny-bar
+$ npm install @berryv/g2-tiny-bar
 ```
 
 ```js
 import { Chart } from "@antv/g2";
-import { TinyBar } from "@strawberry-vis/g2-tiny-bar";
+import { TinyBar } from "@berryv/g2-tiny-bar";
 
 const chart = new Chart({
   container: "container",
@@ -37,7 +37,7 @@ For legacy environments:
 
 ```html
 <script src="https://unpkg.com/@antv/g2"></script>
-<script src="https://unpkg.com/@strawberry-vis/g2-tiny-bar"></script>
+<script src="https://unpkg.com/@berryv/g2-tiny-bar"></script>
 <script>
   const chart = new G2.Chart({
     container: "container",
@@ -134,7 +134,7 @@ chart
 
 ```js
 import { register } from "@antv/g2";
-import { TinyBar } from "@strawberry-vis/tiny-bar";
+import { TinyBar } from "@berryv/tiny-bar";
 
 register("mark.tinyBar", TinyBar);
 
